@@ -1,6 +1,8 @@
 describe S3Upload do
   describe "#bucket_names" do
-    let(:s3){ S3Upload.new }
+    let(:s3) do
+      S3Upload.new
+    end
 
     it "bucketに rails-fileup-matsuhisa がある" do
       expect(s3.bucket_names).to include S3Upload::BUCKET_NAME
