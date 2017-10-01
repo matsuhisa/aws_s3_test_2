@@ -10,8 +10,6 @@ class S3Upload
     s3_resource.buckets.to_a.map(&:name)
   end
 
-  private
-
   def s3_resource
     @s3 ||= Aws::S3::Resource.new
   end
